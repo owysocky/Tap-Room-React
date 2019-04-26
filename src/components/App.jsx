@@ -7,6 +7,7 @@ import Home from './Home';
 import Locations from './Locations';
 import BeerList from './BeerList';
 import AddBeer from './AddBeer';
+import ErrorHandler from './ErrorHandler';
 
 function App(){
   return (
@@ -26,6 +27,7 @@ function App(){
         <Route path='/locations' component={Locations}/>
         <Route path='/beer' component={BeerList}/>
         <Route path='/admin' component={AddBeer}/>
+        <Route component={ErrorHandler} />
       </Switch>
       </div>
       <Footer/>
