@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import logo from '../assets/images/logo.png';
 
-function App(){
+function Header(){
   let linkDecoration = {
     textDecoration: 'none',
     color: 'white'
@@ -55,4 +55,4 @@ function App(){
   );
 }
 
-export default App;
+export default Header;
