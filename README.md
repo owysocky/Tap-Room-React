@@ -5,7 +5,7 @@
 #### By _**Olha Wysocky**_
 
 ## Description
-_This is a website for a tap room._
+_This is a website for a tap room. It looks like React components are less reuseble than in Angular, and more like a whole independent page._
 
 ## Specs
 
@@ -13,6 +13,9 @@ _This is a website for a tap room._
 
 ## Known Bugs
 _No known bugs._
+
+### Notes
+_Had to redo the component structure 3 times since the project started._
 
 ## Installation Requirements
 * _Download and install Node.js_

@@ -13,6 +13,7 @@ function AddBeer(){
           width: 50%;
           border: 1px solid #213458;
           border-radius: 10px;
+          margin: 3px;
         }
         input:focus {
           outline: none !important;
