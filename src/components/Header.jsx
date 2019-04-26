@@ -47,7 +47,7 @@ function Header(){
           <img src={logo}></img>
         </div>
         <div>
-          <p><Link to="/" style={lessVisible}>Admin</Link></p>
+          <p><Link to="/admin" style={lessVisible}>Admin</Link></p>
         </div>
       </div>
 

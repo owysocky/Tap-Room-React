@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import Home from './Home';
+import Locations from './Locations';
 
 function App(){
   return (
@@ -19,7 +20,8 @@ function App(){
       <div className="footer-margin">
       <Header/>
       <Switch>
-        <Home/>
+        <Route exact path='/' component={Home}/>
+        <Route path='/locations' component={Locations}/>
       </Switch>
       </div>
       <Footer/>
