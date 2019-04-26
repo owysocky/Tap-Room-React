@@ -5,20 +5,26 @@ function Beer(props) {
   return (
     <div>
       <style jsx>{`
-        .container{          
+        .container{
+          color: white;
+          background-color: #213458;
           border: 2px solid #213458;
+          border-radius: 15px;
           width: 300px;
           padding: 5px;
           margin-top: 10px;
         }
         .container:hover {
-          box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
           transform: scale(1.02);
+          background: linear-gradient(0deg, rgba(33,52,88,1) 0%, rgba(34,193,195,1) 100%);
+        }
+        .weight{
+          font-weight: 300;
         }
       `}</style>
       <div className="container">
       <h4>{props.name}</h4>
-      <h4>{props.type}</h4>
+      <h4 className="weight">{props.type}</h4>
       <h5>Booth {props.company}</h5>
       <br/>
       <p>{props.alcohol}%</p>
