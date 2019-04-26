@@ -14,8 +14,8 @@ function Home(){
           text-align: center;
         }
       `}</style>
-      <img src={event1}></img>
       <img src={event2}></img>
+      <img src={event1}></img>
     </div>
   );
 }
