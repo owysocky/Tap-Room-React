@@ -18,6 +18,7 @@ function App(){
         height: 100px;
       }
       div{
+        height: 100px;
         background-color: #213458;
         text-align: center;
       }
@@ -27,6 +28,7 @@ function App(){
         display: inline-block;
       }
       p{
+        margin-top:40px;
         display: inline-block;
         padding-right: 30px;
       }
