@@ -50,21 +50,24 @@ function BeerList() {
   return (
     <div>
       <style jsx>{`
-        div {
-          margin-left: 150px;
+        .container{
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
           margin-top: 40px;
         }
       `}</style>
-      {onTap.map((element, index) => (
-        <Beer
-          name={element.name}
-          type={element.type}
-          company={element.company}
-          alcohol={element.alcohol}
-          price={element.price}
-          key={index}
-        />
-      ))}
+      <div className="container">
+        {onTap.map((element, index) => (
+          <Beer
+            name={element.name}
+            type={element.type}
+            company={element.company}
+            alcohol={element.alcohol}
+            price={element.price}
+            key={index}
+          />
+        ))}
+      </div>
     </div>
   );
 }
