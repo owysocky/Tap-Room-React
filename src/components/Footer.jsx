@@ -4,8 +4,8 @@ import logo from '../assets/images/footer.png';
 function Footer(){
   return (
     <div>
-    <style global>{`
-      img{
+    <style>{`
+      .footer img{
         height: 70px;
       }
       .footer {
