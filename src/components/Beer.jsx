@@ -7,8 +7,8 @@ function Beer(props) {
       <style jsx>{`
         .container{
           color: white;
-          background-color: #213458;
-          border: 2px solid #213458;
+          background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(33,52,88,1) 100%);
+          border: 2px solid linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(33,52,88,1) 100%);
           border-radius: 15px;
           width: 300px;
           padding: 5px;

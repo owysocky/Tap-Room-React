@@ -9,14 +9,14 @@ function Home(){
         img {
           max-width: 100%;
           height: auto;
-          width: auto\9; 
+          width: auto\9;
         }
         div{
           text-align: center;
         }
       `}</style>
-      <img src={event1}></img>
       <img src={event2}></img>
+      <img src={event1}></img>
     </div>
   );
 }

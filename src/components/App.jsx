@@ -6,6 +6,7 @@ import Footer from './Footer';
 import Home from './Home';
 import Locations from './Locations';
 import BeerList from './BeerList';
+import AddBeer from './AddBeer';
 
 function App(){
   return (
@@ -24,6 +25,7 @@ function App(){
         <Route exact path='/' component={Home}/>
         <Route path='/locations' component={Locations}/>
         <Route path='/beer' component={BeerList}/>
+        <Route path='/admin' component={AddBeer}/>
       </Switch>
       </div>
       <Footer/>
