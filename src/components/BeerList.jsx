@@ -18,13 +18,13 @@ const onTap = [
   },
   {
     name: "Barrel-Aged Abraxas",
-    type: "American Imperial Stout ",
+    type: "American Imperial Stout",
     company: "Perennial Artisan Ales",
     alcohol: "11.00",
     price: "5"
   },
   {
-    name: "Hunahpu's Imperial Stout - Double Barrel Aged",
+    name: "Hunahpu's Imperial Stout",
     type: "American Imperial Stout",
     company: "Cigar City Brewing",
     alcohol: "11.00",
@@ -50,10 +50,13 @@ function BeerList() {
   return (
     <div>
       <style jsx>{`
+        div{
+          margin-bottom: 80px;
+        }
         .container{
           display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
-          margin-top: 40px;
+          grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+          margin-top: 30px;
         }
       `}</style>
       <div className="container">
