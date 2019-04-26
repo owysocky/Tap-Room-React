@@ -12,12 +12,16 @@ function App(){
         div{
           font-family: Courier New;
         }
+        .footer-margin{
+          margin-bottom: 70px;
+        }
       `}</style>
-
+      <div className="footer-margin">
       <Header/>
       <Switch>
         <Home/>
       </Switch>
+      </div>
       <Footer/>
 
     </div>
