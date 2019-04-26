@@ -2,20 +2,35 @@ import React from 'react';
 
 function AddBeer(){
   return (
-    <div>
+    <div className="add-beer">
+    <style>{`
+      .add-beer{
+        margin-top: 20px;
+      }
+    `}</style>
       <form>
         <input
           type='text'
-          id='names'
-          placeholder='Pair Names'/>
+          id='name'
+          placeholder='Beer Name'/>
         <input
           type='text'
-          id='location'
-          placeholder='Location'/>
-        <textarea
-          id='issue'
-          placeholder='Describe your issue.'/>
-        <button type='submit'>Help!</button>
+          id='type'
+          placeholder='Beer Type'/>
+          <input
+            type='text'
+            id='company'
+            placeholder='Beer Company'/>
+          <input
+            type='text'
+            id='alcohol'
+            placeholder='Alcohol percentage'/>
+            <input
+              type='text'
+              id='price'
+              placeholder='Beer price'/>
+
+        <button type='submit'>Add</button>
       </form>
     </div>
   );
