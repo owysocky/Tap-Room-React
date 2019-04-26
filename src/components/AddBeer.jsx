@@ -14,6 +14,11 @@ function AddBeer(){
           border: 1px solid #213458;
           border-radius: 10px;
         }
+        input:focus {
+          outline: none !important;
+          border:1px solid #213458;
+          box-shadow: 0 0 10px #719ECE;
+        }
         button{
           padding: 20px;
           color: white;
