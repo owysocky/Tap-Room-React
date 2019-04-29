@@ -1,6 +1,20 @@
 import React from 'react';
 
-function AddBeer(){
+function AddBeer() {
+  let _name = null;
+  let _type = null;
+  let _company = null;
+  let _alcohol = null;
+  let _price = null;
+  function handleNewBeerSubmission(event) {
+    enent.preventDefault()
+    _name.value = '';
+    _type.value = '';
+    _company.value = '';
+    _alcohol.value = '';
+    _price.value = '';
+
+  }
   return (
     <div className="add-beer">
       <style>{`
@@ -33,33 +47,38 @@ function AddBeer(){
         }
       `}</style>
       <h3>Got new beer on tap?</h3>
-      <form>
+      <form onSubmit={handleNewBeerSubmission}>
         <input
           type='text'
           id='name'
-          placeholder='Beer Name'/>
-          <br/>
+          placeholder='Beer Name'
+          ref={(input) => { _name = input; }} />
+        <br />
         <input
           type='text'
           id='type'
-          placeholder='Beer Type'/>
-          <br/>
+          placeholder='Beer Type'
+          ref={(input) => { _type = input; }} />
+        <br />
         <input
           type='text'
           id='company'
-          placeholder='Beer Company'/>
-          <br/>
+          placeholder='Beer Company'
+          ref={(input) => { _company = input; }} />
+        <br />
         <input
           type='text'
           id='alcohol'
-          placeholder='Alcohol percentage'/>
-          <br/>
+          placeholder='Alcohol percentage'
+          ref={(input) => { _alcohol = input; }} />
+        <br />
         <input
           type='text'
           id='price'
-          placeholder='Beer price'/>
-          <br/>
-          <br/>
+          placeholder='Beer price'
+          ref={(input) => { _price = input; }} />
+        <br />
+        <br />
         <button type='submit'>Add</button>
       </form>
     </div>

@@ -23,14 +23,14 @@ function Beer(props) {
         }
       `}</style>
       <div className="container">
-      <h4>{props.name}</h4>
-      <h4 className="weight">{props.type}</h4>
-      <h5>Booth {props.company}</h5>
-      <br/>
-      <p>{props.alcohol}%</p>
-      <h4>$ {props.price}</h4>
-    </div>
+        <h4>{props.name}</h4>
+        <h4 className="weight">{props.type}</h4>
+        <h5>Booth {props.company}</h5>
+        <br />
+        <p>{props.alcohol}%</p>
+        <h4>$ {props.price}</h4>
       </div>
+    </div>
 
   );
 }
