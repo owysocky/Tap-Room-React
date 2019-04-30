@@ -15,6 +15,13 @@ class App extends React.Component {
     this.state = {
       onTap: []
     };
+    this.handleAddingNewBeer = this.handleAddingNewBeer.bind(this);
+  }
+
+  handleAddingNewBeer(newBeer) {
+    var newOnTapList = this.state.onTap.slice();
+    newOnTapList.push(newBeer);
+    this.setState({ onTap: newOnTapList });
   }
 
   render() {
@@ -33,8 +40,8 @@ class App extends React.Component {
           <Switch>
             <Route exact path='/' component={Home} />
             <Route path='/locations' component={Locations} />
-            <Route path='/beer' component={BeerList} />
-            <Route path='/admin' component={AddBeer} />
+            <Route path='/beer' render={() => <BeerList beerList={this.state.onTap} />} />
+            <Route path='/admin' render={() => <AddBeer onNewBeerAddition={this.handleAddingNewBeer} />} />
             <Route component={ErrorHandler} />
           </Switch>
         </div>

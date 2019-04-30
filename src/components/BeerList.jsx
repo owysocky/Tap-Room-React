@@ -1,7 +1,8 @@
 import React from "react";
 import Beer from "./Beer";
+import PropTypes from 'prop-types';
 
-function BeerList() {
+function BeerList(props) {
   return (
     <div>
       <style jsx>{`
@@ -15,7 +16,7 @@ function BeerList() {
         }
       `}</style>
       <div className="container">
-        {onTap.map((element, index) => (
+        {props.beerList.map((element, index) => (
           <Beer
             name={element.name}
             type={element.type}
@@ -29,5 +30,9 @@ function BeerList() {
     </div>
   );
 }
+
+BeerList.propType = {
+  beerList: PropTypes.array
+};
 
 export default BeerList;

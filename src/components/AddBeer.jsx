@@ -1,20 +1,23 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function AddBeer() {
+function AddBeer(props) {
   let _name = null;
   let _type = null;
   let _company = null;
   let _alcohol = null;
   let _price = null;
+
   function handleNewBeerSubmission(event) {
     enent.preventDefault()
+    props.onNewBeerAddition({ name: _name.value, type: _type.value, company: _company.value, alcohol: _alcohol.value, price: _price.value })
     _name.value = '';
     _type.value = '';
     _company.value = '';
     _alcohol.value = '';
     _price.value = '';
-
   }
+
   return (
     <div className="add-beer">
       <style>{`
@@ -84,5 +87,9 @@ function AddBeer() {
     </div>
   );
 }
+
+AddBeer.propTypes = {
+  onNewBeerAddition: PropTypes.func
+};
 
 export default AddBeer;
