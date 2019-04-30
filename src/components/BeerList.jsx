@@ -16,14 +16,14 @@ function BeerList(props) {
         }
       `}</style>
       <div className="container">
-        {props.beerList.map((element, index) => (
+        {props.beerList.map((element) => (
           <Beer
             name={element.name}
             type={element.type}
             company={element.company}
             alcohol={element.alcohol}
             price={element.price}
-            key={index}
+            key={element.id}
           />
         ))}
       </div>
