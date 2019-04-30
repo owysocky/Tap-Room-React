@@ -9,13 +9,13 @@ function AddBeer(props) {
   let _price = null;
 
   function handleNewBeerSubmission(event) {
-    enent.preventDefault()
+    event.preventDefault()
     props.onNewBeerAddition({ name: _name.value, type: _type.value, company: _company.value, alcohol: _alcohol.value, price: _price.value })
-    _name.value = '';
-    _type.value = '';
-    _company.value = '';
-    _alcohol.value = '';
-    _price.value = '';
+    _name.value = "";
+    _type.value = "";
+    _company.value = "";
+    _alcohol.value = "";
+    _price.value = "";
   }
 
   return (

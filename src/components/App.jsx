@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { Switch, Route } from 'react-router-dom';
 
 import Header from './Header';
@@ -9,7 +9,7 @@ import BeerList from './BeerList';
 import AddBeer from './AddBeer';
 import ErrorHandler from './ErrorHandler';
 
-class App extends React.Component {
+class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -22,6 +22,7 @@ class App extends React.Component {
     var newOnTapList = this.state.onTap.slice();
     newOnTapList.push(newBeer);
     this.setState({ onTap: newOnTapList });
+    console.log(this.state.onTap);
   }
 
   render() {
