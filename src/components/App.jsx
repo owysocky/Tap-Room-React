@@ -1,13 +1,14 @@
 import React, { Component } from "react";
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route } from "react-router-dom";
 
-import Header from './Header';
-import Footer from './Footer';
-import Home from './Home';
-import Locations from './Locations';
-import BeerList from './BeerList';
-import AddBeer from './AddBeer';
-import ErrorHandler from './ErrorHandler';
+import Header from "./Header";
+import Footer from "./Footer";
+import Home from "./Home";
+import Locations from "./Locations";
+import BeerList from "./BeerList";
+import AddBeer from "./AddBeer";
+import ErrorHandler from "./ErrorHandler";
+import AdminEdit from "./AdminEdit";
 
 class App extends Component {
   constructor(props) {
@@ -81,15 +82,24 @@ class App extends Component {
         <div className="footer-margin">
           <Header />
           <Switch>
-            <Route exact path='/' component={Home} />
-            <Route path='/locations' component={Locations} />
-            <Route path='/beer' render={() => <BeerList beerList={this.state.onTap} />} />
-            <Route path='/admin' render={() => <AddBeer onNewBeerAddition={this.handleAddingNewBeer} />} />
+            <Route exact path="/" component={Home} />
+            <Route path="/locations" component={Locations} />
+            <Route
+              path="/beer"
+              render={() => <BeerList beerList={this.state.onTap} />}
+            />
+            <Route
+              exact
+              path="/admin"
+              render={() => (
+                <AddBeer onNewBeerAddition={this.handleAddingNewBeer} />
+              )}
+            />
+            <Route path="/admin/edit" component={AdminEdit} />
             <Route component={ErrorHandler} />
           </Switch>
         </div>
         <Footer />
-
       </div>
     );
   }
