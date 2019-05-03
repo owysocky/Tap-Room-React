@@ -1,12 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-import error from '../assets/images/404-error.jpg'
+import React from "react";
+import { Link } from "react-router-dom";
+import error from "../assets/images/404-error.jpg";
 
-function ErrorHandler(props){
+function ErrorHandler(props) {
   return (
     <div className="error-handler">
-    <style>{`
+      <style>{`
       .error-handler{
         text-align: center;
       }
@@ -23,8 +22,10 @@ function ErrorHandler(props){
       }
     `}</style>
       <h2>Page does not exist!</h2>
-      <h3>Would you like to return <Link to="/">home</Link> instead?</h3>
-      <img src={error}></img>
+      <h3>
+        Would you like to return <Link to="/">home</Link> instead?
+      </h3>
+      <img src={error} />
     </div>
   );
 }
