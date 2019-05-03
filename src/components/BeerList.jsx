@@ -18,6 +18,7 @@ function BeerList(props) {
       <div className="container">
         {props.beerList.map(element => (
           <Beer
+            currentRouterPath={props.currentRouterPath}
             name={element.name}
             type={element.type}
             company={element.company}
@@ -33,7 +34,8 @@ function BeerList(props) {
 }
 
 BeerList.propType = {
-  beerList: PropTypes.array
+  beerList: PropTypes.array,
+  currentRouterPath: PropTypes.string
 };
 
 export default BeerList;
