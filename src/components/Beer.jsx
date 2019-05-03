@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Beer(props) {
   const onTapInfo = (
@@ -7,11 +8,7 @@ function Beer(props) {
       <style jsx>{`
         .container {
           color: white;
-          background: linear-gradient(
-            0deg,
-            rgba(255, 255, 255, 1) 0%,
-            rgba(33, 52, 88, 1) 100%
-          );
+          background: #213458;
           border: 2px solid
             linear-gradient(
               0deg,
@@ -71,13 +68,26 @@ function Beer(props) {
             rgba(34, 193, 195, 1) 100%
           );
         }
-        .weight {
+        .h4-admin {
           font-weight: 300;
+        }
+        .btn-admin{
+          padding: 10px;
+          background-color: white;
+          border: 1px solid #213458;
+          border-radius: 10px;
+        }
+        .btn-admin:focus {
+          outline: none !important;
+          border:1px solid #213458;
+          box-shadow: 0 0 10px white;
         }
       `}</style>
       <div className="container">
-        <h4>{props.name}</h4>
-        <button />
+        <h4 className="h4-admin">{props.name}</h4>
+        <button className="btn-admin">
+          <FontAwesomeIcon icon="trash-alt" />
+        </button>
       </div>
     </div>
   );
