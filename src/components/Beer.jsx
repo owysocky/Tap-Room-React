@@ -87,6 +87,8 @@ function Beer(props) {
         <h4 className="h4-admin">{props.name}</h4>
         <button
           onClick={() => {
+            console.log(props.id);
+
             props.onClickDelete(props.id);
           }}
           className="btn-admin"

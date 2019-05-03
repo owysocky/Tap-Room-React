@@ -26,42 +26,48 @@ class App extends Component {
           type: "American Imperial Stout",
           company: "Toppling Goliath Brewing Co.",
           alcohol: "12.00",
-          price: "5"
+          price: "5",
+          id: "f0sag"
         },
         {
           name: "Marshmallow Handjee",
           type: "Russian Imperial Stout",
           company: "3 Floyds Brewing Co.",
           alcohol: "15.00",
-          price: "5"
+          price: "5",
+          id: "8q8gy"
         },
         {
           name: "Barrel-Aged Abraxas",
           type: "American Imperial Stout",
           company: "Perennial Artisan Ales",
           alcohol: "11.00",
-          price: "5"
+          price: "5",
+          id: "ajf96a"
         },
         {
           name: "Hunahpu's Imperial Stout",
           type: "American Imperial Stout",
           company: "Cigar City Brewing",
           alcohol: "11.00",
-          price: "5"
+          price: "5",
+          id: "afhui62"
         },
         {
           name: "King Julius",
           type: "New England IPA",
           company: "Tree House Brewing Company",
           alcohol: "8.30",
-          price: "5"
+          price: "5",
+          id: "9a87ga"
         },
         {
           name: "Heady Topper",
           type: "New England IPA",
           company: "The Alchemist",
           alcohol: "8.00",
-          price: "5"
+          price: "5",
+          id: "09agy2"
         }
       ]
     };
@@ -79,6 +85,8 @@ class App extends Component {
 
   handleDelition(id) {
     let newList = this.state.onTap.slice();
+    console.log(this.findIndex(id));
+
     newList.splice(this.findIndex(id), 1);
     this.setState({ onTap: newList });
   }
