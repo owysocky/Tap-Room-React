@@ -66,14 +66,21 @@ class App extends Component {
       ]
     };
     this.handleAddingNewBeer = this.handleAddingNewBeer.bind(this);
+    this.handleDelition = this.handleDelition.bind(this);
   }
 
   findIndex(id) {
-    for (var i = 0; i < this.state.masterPostList.length; i++) {
-      if (id == this.state.masterPostList[i].id) {
+    for (var i = 0; i < this.state.onTap.length; i++) {
+      if (id == this.state.onTap[i].id) {
         return i;
       }
     }
+  }
+
+  handleDelition(id) {
+    let newList = this.state.onTap.slice();
+    newList.splice(this.findIndex(id), 1);
+    this.setState({ onTap: newList });
   }
 
   handleAddingNewBeer(newBeer) {
@@ -115,6 +122,7 @@ class App extends Component {
                 <AdminEdit
                   beerList={this.state.onTap}
                   currentRouterPath={props.location.pathname}
+                  onClickDelete={this.handleDelition}
                 />
               )}
             />

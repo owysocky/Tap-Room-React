@@ -18,6 +18,7 @@ function BeerList(props) {
       <div className="container">
         {props.beerList.map(element => (
           <Beer
+            onClickDelete={props.onClickDelete}
             currentRouterPath={props.currentRouterPath}
             name={element.name}
             type={element.type}
@@ -35,7 +36,8 @@ function BeerList(props) {
 
 BeerList.propType = {
   beerList: PropTypes.array,
-  currentRouterPath: PropTypes.string
+  currentRouterPath: PropTypes.string,
+  onClickDelete: PropTypes.func
 };
 
 export default BeerList;

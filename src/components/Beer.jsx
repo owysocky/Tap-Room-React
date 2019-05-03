@@ -85,7 +85,12 @@ function Beer(props) {
       `}</style>
       <div className="container">
         <h4 className="h4-admin">{props.name}</h4>
-        <button className="btn-admin">
+        <button
+          onClick={() => {
+            props.onClickDelete(props.id);
+          }}
+          className="btn-admin"
+        >
           <FontAwesomeIcon icon="trash-alt" />
         </button>
       </div>
@@ -105,7 +110,8 @@ Beer.propTypes = {
   company: PropTypes.string,
   alcohol: PropTypes.string,
   price: PropTypes.string,
-  currentRouterPath: PropTypes.string
+  currentRouterPath: PropTypes.string,
+  onClickDelete: PropTypes.func
 };
 
 export default Beer;
