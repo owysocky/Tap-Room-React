@@ -62,6 +62,14 @@ class App extends Component {
     this.handleAddingNewBeer = this.handleAddingNewBeer.bind(this);
   }
 
+  findIndex(id) {
+    for (var i = 0; i < this.state.masterPostList.length; i++) {
+      if (id == this.state.masterPostList[i].id) {
+        return i;
+      }
+    }
+  }
+
   handleAddingNewBeer(newBeer) {
     var newOnTapList = this.state.onTap.slice();
     newOnTapList.unshift(newBeer);
@@ -95,7 +103,15 @@ class App extends Component {
                 <AddBeer onNewBeerAddition={this.handleAddingNewBeer} />
               )}
             />
-            <Route path="/admin/edit" component={AdminEdit} />
+            <Route
+              path="/admin/edit"
+              render={props => (
+                <AdminEdit
+                  beerList={this.state.onTap}
+                  currentRouterPath={props.location.pathname}
+                />
+              )}
+            />
             <Route component={ErrorHandler} />
           </Switch>
         </div>

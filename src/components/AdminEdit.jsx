@@ -1,13 +1,19 @@
 import React from "react";
 import AdminHeader from "./AdminHeader";
+import BeerList from "./BeerList";
+import PropTypes from "prop-types";
 
-const AdminEdit = () => {
+const AdminEdit = props => {
   return (
     <div>
       <AdminHeader />
-      <h1>Works</h1>
+      <BeerList beerList={props.beerList} />
     </div>
   );
+};
+
+AdminEdit.propTypes = {
+  beerList: PropTypes.array
 };
 
 export default AdminEdit;
