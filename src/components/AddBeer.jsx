@@ -1,6 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { v4 } from 'uuid';
+import React from "react";
+import PropTypes from "prop-types";
+import { v4 } from "uuid";
+import AdminHeader from "./AdminHeader";
 
 function AddBeer(props) {
   let _name = null;
@@ -10,8 +11,15 @@ function AddBeer(props) {
   let _price = null;
 
   function handleNewBeerSubmission(event) {
-    event.preventDefault()
-    props.onNewBeerAddition({ name: _name.value, type: _type.value, company: _company.value, alcohol: _alcohol.value, price: _price.value, id: v4() })
+    event.preventDefault();
+    props.onNewBeerAddition({
+      name: _name.value,
+      type: _type.value,
+      company: _company.value,
+      alcohol: _alcohol.value,
+      price: _price.value,
+      id: v4()
+    });
     _name.value = "";
     _type.value = "";
     _company.value = "";
@@ -20,7 +28,7 @@ function AddBeer(props) {
   }
 
   return (
-    <div className="add-beer">
+    <div>
       <style>{`
         .add-beer{
           margin-top: 20px;
@@ -50,41 +58,61 @@ function AddBeer(props) {
           color: #213458;
         }
       `}</style>
-      <h3>Got new beer on tap?</h3>
-      <form onSubmit={handleNewBeerSubmission}>
-        <input
-          type='text'
-          id='name'
-          placeholder='Beer Name'
-          ref={(input) => { _name = input; }} />
-        <br />
-        <input
-          type='text'
-          id='type'
-          placeholder='Beer Type'
-          ref={(input) => { _type = input; }} />
-        <br />
-        <input
-          type='text'
-          id='company'
-          placeholder='Beer Company'
-          ref={(input) => { _company = input; }} />
-        <br />
-        <input
-          type='text'
-          id='alcohol'
-          placeholder='Alcohol percentage'
-          ref={(input) => { _alcohol = input; }} />
-        <br />
-        <input
-          type='text'
-          id='price'
-          placeholder='Beer price'
-          ref={(input) => { _price = input; }} />
-        <br />
-        <br />
-        <button type='submit'>Add</button>
-      </form>
+      <div>
+        <AdminHeader />
+      </div>
+      <div className="add-beer">
+        <h3>Got new beer on tap?</h3>
+        <form onSubmit={handleNewBeerSubmission}>
+          <input
+            type="text"
+            id="name"
+            placeholder="Beer Name"
+            ref={input => {
+              _name = input;
+            }}
+          />
+          <br />
+          <input
+            type="text"
+            id="type"
+            placeholder="Beer Type"
+            ref={input => {
+              _type = input;
+            }}
+          />
+          <br />
+          <input
+            type="text"
+            id="company"
+            placeholder="Beer Company"
+            ref={input => {
+              _company = input;
+            }}
+          />
+          <br />
+          <input
+            type="text"
+            id="alcohol"
+            placeholder="Alcohol percentage"
+            ref={input => {
+              _alcohol = input;
+            }}
+          />
+          <br />
+          <input
+            type="text"
+            id="price"
+            placeholder="Beer price"
+            ref={input => {
+              _price = input;
+            }}
+          />
+          <br />
+          <br />
+          <button type="submit">Add</button>
+        </form>
+      </div>
     </div>
   );
 }
