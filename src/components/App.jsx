@@ -85,8 +85,6 @@ class App extends Component {
 
   handleDelition(id) {
     let newList = this.state.onTap.slice();
-    console.log(this.findIndex(id));
-
     newList.splice(this.findIndex(id), 1);
     this.setState({ onTap: newList });
   }
