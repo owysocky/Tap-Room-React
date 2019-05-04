@@ -21,12 +21,17 @@ function AdminHeader() {
     `}</style>
       <p>
         <Link to="/admin" style={linkDecoration}>
-          Add
+          Add Beer
         </Link>
       </p>
       <p>
         <Link to="/admin/edit" style={linkDecoration}>
           Edit
+        </Link>
+      </p>
+      <p>
+        <Link to="/admin/ad" style={linkDecoration}>
+          Add Ad
         </Link>
       </p>
     </div>

@@ -9,6 +9,7 @@ import BeerList from "./BeerList";
 import AddBeer from "./AddBeer";
 import ErrorHandler from "./ErrorHandler";
 import AdminEdit from "./AdminEdit";
+import AddAd from "./AddAd";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -81,6 +82,7 @@ class App extends Component {
       ]
     };
     this.handleAddingNewBeer = this.handleAddingNewBeer.bind(this);
+    this.handleAddingNewAd = this.handleAddingNewAd.bind(this);
     this.handleDelition = this.handleDelition.bind(this);
   }
 
@@ -102,6 +104,13 @@ class App extends Component {
     var newOnTapList = this.state.onTap.slice();
     newOnTapList.unshift(newBeer);
     this.setState({ onTap: newOnTapList });
+  }
+
+  handleAddingNewAd(newAd) {
+    var list = this.state.ad.slice();
+    list.unshift(newAd);
+    this.setState({ ad: list });
+    console.log(this.state.ad);
   }
 
   render() {
@@ -144,6 +153,11 @@ class App extends Component {
                   onClickDelete={this.handleDelition}
                 />
               )}
+            />
+            <Route
+              exact
+              path="/admin/ad"
+              render={() => <AddAd onNewAdAddition={this.handleAddingNewAd} />}
             />
             <Route component={ErrorHandler} />
           </Switch>
