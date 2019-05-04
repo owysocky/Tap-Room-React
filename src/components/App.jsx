@@ -69,6 +69,15 @@ class App extends Component {
           price: "5",
           id: "09agy2"
         }
+      ],
+      ad: [
+        {
+          event: "Summer Solstice Beer Festival",
+          dates: "Fri, May 31, 4:00 PM – Sat, Jun 1, 7:30 PM",
+          location: "Magnuson Park Hangar 306310 NE 74th St, Seattle, WA",
+          description:
+            "SFMA Market Association is proud to be part of Seattle's largest indoor Night Market returns to the Magnsuon Park Hangar 30 with over a 150 vendors and a new, alfresco annual Summer Beer Festival"
+        }
       ]
     };
     this.handleAddingNewBeer = this.handleAddingNewBeer.bind(this);
@@ -109,7 +118,11 @@ class App extends Component {
         <div className="footer-margin">
           <Header />
           <Switch>
-            <Route exact path="/" component={Home} />
+            <Route
+              exact
+              path="/"
+              render={() => <Home adList={this.state.ad} />}
+            />
             <Route path="/locations" component={Locations} />
             <Route
               path="/beer"
